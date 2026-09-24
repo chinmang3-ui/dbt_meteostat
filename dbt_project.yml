@@ -1,3 +1,5 @@
+# We do not have .env file at here because it is totally differnt in dbt.
+
 
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
@@ -12,6 +14,7 @@ profile: 'default'
 # These configurations specify where dbt should look for different types of files.
 # The `model-paths` config, for example, states that models in this project can be
 # found in the "models/" directory. You probably won't need to change these!
+
 model-paths: ["models"]
 analysis-paths: ["analyses"]
 test-paths: ["tests"]
@@ -34,9 +37,19 @@ clean-targets:         # directories to be removed by `dbt clean`
 # instead be materialized as tables. Any models you add to the root of the models folder will 
 # continue to be built as views. These settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
+# this is storing the physical output as the table not as the view.
+# having mart as a view is common because we do not want to amend the table to the mart.
+
+
 
 models:
   my_new_project:
-    # Applies to all files under models/example/
-    example:
+    # Applies to all files under models/staging/
+    staging:
+      +materialized: table
+    # Applies to all files under models/prep/
+    prep:
+      +materialized: table
+    # Applies to all files under models/mart/
+    mart:
       +materialized: table

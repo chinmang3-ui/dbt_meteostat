@@ -1,0 +1,21 @@
+# to tell dbt where he will extract the data from, will make the copy from.
+# there is two sources weather_data and flights_data now. 
+# there is 2 tables from s_mangchin schema and 3 tables from public schema.
+# two tables come from API and three tables come from what we already had in DBeaver(postgressql)
+# to merge these 5 tables, we need to have new schema.
+
+version: 2
+sources:
+
+- name: weather_data
+  schema: s_mangchin
+  tables:
+    - name: weather_daily_raw
+    - name: weather_hourly_raw
+
+- name: flights_data
+  schema: public
+  tables:
+    - name: flights
+    - name: airports
+    - name: regions
