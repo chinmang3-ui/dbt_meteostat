@@ -55,10 +55,8 @@ models:
       +materialized: table
 
 models:
- northwind:
+  northwind:
     +materialized: table
-
-
 
 
 
