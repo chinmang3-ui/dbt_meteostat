@@ -1,15 +1,15 @@
 WITH source_data AS (
     SELECT *
-    FROM {{ source('northwind', 'customers') }}
+    FROM {{ source('northwind_data', 'customers') }}
 )
 SELECT
-    customerid AS customer_id
-    ,companyname AS company_name
-    ,contactname AS contact_name
-    ,contacttitle AS contact_title
+    customer_id
+    ,company_name
+    ,contact_name
+    ,contact_title
     ,address
     ,city
     ,region
-    ,postalcode AS postal_code
+    ,postal_code
     ,country
 FROM source_data
