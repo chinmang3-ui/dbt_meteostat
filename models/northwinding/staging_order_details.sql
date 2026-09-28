@@ -9,3 +9,5 @@ SELECT
     ,quantity::INT AS quantity
     ,discount::NUMERIC AS discount
 FROM source_data
+
+--just adding

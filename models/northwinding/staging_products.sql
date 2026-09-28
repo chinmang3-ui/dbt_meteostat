@@ -9,3 +9,5 @@ SELECT
     ,categoryid AS category_id
     ,unitprice::NUMERIC AS unit_price
 FROM source_data
+
+--just adding

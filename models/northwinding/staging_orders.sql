@@ -13,3 +13,5 @@ SELECT
     ,shipcity AS ship_city
     ,shipcountry
 FROM source_data
+
+--just adding
