@@ -40,8 +40,6 @@ clean-targets:         # directories to be removed by `dbt clean`
 # this is storing the physical output as the table not as the view.
 # having mart as a view is common because we do not want to amend the table to the mart.
 
-
-
 models:
   my_new_project:
     # Applies to all files under models/staging/
@@ -56,6 +54,7 @@ models:
     # Applies to all files under models/northwind/
     northwind:
       +materialized: table
+
 
 
 
