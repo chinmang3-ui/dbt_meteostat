@@ -23,3 +23,12 @@ daily_flattened AS (
     )
     SELECT * 
     FROM daily_flattened
+
+/* -> = get something from JSON
+JSON_ARRAY_ELEMENTS() = split a JSON array into rows
+AS json_data = give those rows a name*/
+
+/* -> = returns a JSON value
+   ->> = returns the value as text+/
+
+/* (json_data->>'date')::DATE = This is called casting*/

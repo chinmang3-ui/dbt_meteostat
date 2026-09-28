@@ -27,3 +27,6 @@ WITH flights_one_month AS (
     FROM flights_one_month
     )
     SELECT * FROM flights_cleaned
+
+/* TO_CHAR() converts a value into formatted text, to produce a 4-digit representation.*/
+/* ::TIME = This means casts the value to PostgreSQL's TIME data type.*/

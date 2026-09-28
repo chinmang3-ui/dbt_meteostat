@@ -12,3 +12,5 @@ WITH airports_reorder AS (
     FROM {{ref('staging_airports')}}
     )
     SELECT * FROM airports_reorder
+
+/* ref() tells dbt: "This model depends on that other dbt model. We use ref at here because staging_airports is a dbt model. Not the normal sql.*/
